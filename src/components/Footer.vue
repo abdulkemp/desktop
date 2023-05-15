@@ -191,6 +191,10 @@ export default {
     border-bottom: 2px solid blue;
     border-bottom-width: 2px;
 }
+/* .icons:hover {
+    border-bottom: 2px solid blue;
+    border-bottom-width: 2px;
+} */
 
 .time-noti{
     display: flex;
