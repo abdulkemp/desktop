@@ -59,8 +59,7 @@
               />
             </div>
           </div>
-          <button>
-            <a href="https://googlerep.netlify.app/">
+          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <div class="col middle-icons" style="width:3.5rem">
                 <div class="icons" style=" height: 2.4rem;">
                   <img
@@ -70,7 +69,6 @@
                   />
                 </div>
               </div>
-            </a>
           </button>
           <div class="col middle-icons">
             <div class="icons">

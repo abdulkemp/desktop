@@ -1,16 +1,16 @@
 <template>
   <div>
     <div
-      class="modal fade justify-content-start"
+      class="modal fade"
       id="exampleModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
             <button
               type="button"
               class="btn-close"
@@ -19,18 +19,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <iframe src="http://googlerep.netlify.app" frameborder="0" width="900" height="570"></iframe>
+            <iframe src="http://googlerep.netlify.app" frameborder="0"></iframe>
           </div>
-          <!-- <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
     </div>
@@ -56,8 +46,37 @@ export default {
 }
 
 .modal-content{
-  width: fit-content;
-  height: 42rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.modal-body{
+  padding: 0;
+}
+.modal-header{
+  padding: 8px;
+  background-color: rgb(168, 167, 167);
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-header button{
+  background-color: red;
+  border-radius: 0 10px 0 0;
+  color: black;
+  width: 20px;
+}
+
+.modal-dialog{
+  width: 100%;
+  height: 90%;
+  /* border-radius: 50px; */
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
 }
 
 /* .modal{
