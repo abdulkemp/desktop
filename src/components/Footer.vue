@@ -1,157 +1,116 @@
 <template>
   <div class="footer">
-    <div class="containe fixed-bottom">
-      <div class="row">
-        <div class="col-4 left">
-          <div class="weather">
-            <div class="humidity">
-              <img src="https://i.postimg.cc/hvLSPKdf/pngegg-1.png" alt="" />
-            </div>
-            <div class="temp">
-              <p class="temperature">14°C</p>
-              <p>Mostly cloudly</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 middle">
-          <div class="col middle-icons">
-            <div class="icons">
-              <img
-                src="https://i.postimg.cc/2yrthW6F/bb6961095e9a6dc1aac2af24ea88fc52.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="bar">
-            <div class="searching">
-              <form @submit.prevent>
-                <input
-                  type="search"
-                  name="search-outline"
-                  id=""
-                  placeholder="Search"
-                  class="search"
-                  v-model="searchQuery"
-                />
-              </form>
-            </div>
-          </div>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img src="https://i.postimg.cc/ryWvD8hw/pngegg-7.png" alt="" />
-            </div>
-          </div>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img
-                src="https://i.postimg.cc/YC4KR1rt/pngwing-com.png"
-                style="margin-top: 0.1rem"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img
-                src="https://i.postimg.cc/8cstGmn5/pngegg-3.png"
-                style="border-radius: 0 0 5px 5px"
-                alt=""
-              />
-            </div>
-          </div>
-          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <div class="col middle-icons" style="width:3.5rem">
-                <div class="icons" style=" height: 2.4rem;">
-                  <img
-                    src="https://i.postimg.cc/Ghyxj2WZ/pngwing-com-1.png"
-                    alt=""
-                    
-                  />
-                </div>
+      <div class="containe fixed-bottom">
+          <div class="row">
+              <div class="col-4 left">
+                  <div class="weather">
+                      <div class="humidity">
+                          <img src="https://i.postimg.cc/hvLSPKdf/pngegg-1.png" alt="" />
+                      </div>
+                      <div class="temp">
+                          <p class="temperature">14°C</p>
+                          <p>Mostly cloudly</p>
+                      </div>
+                  </div>
               </div>
-          </button>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img src="https://i.postimg.cc/rFR2C1FM/pngegg-5.png" alt="" />
-            </div>
-          </div>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img
-                src="https://i.postimg.cc/gJh3Ht53/pngwing-com-2.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img
-                src="https://i.postimg.cc/vH0xfdBp/pngwing-com-3.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col middle-icons">
-            <div class="icons">
-              <img src="https://i.postimg.cc/qMW09mZN/pngegg-4.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="col-4 right">
-          <div class="col size">
-            <div class="set">
-              <img
-                src="https://i.postimg.cc/R0QVwjQk/pngegg-15.png"
-                style="width: 12px; height: 12px"
-                alt=""
-              />
-              <img
-                src="https://i.postimg.cc/RFSCdXgN/pngegg-16.png"
-                style="width: 15px; height: 12px"
-                alt=""
-              />
-              <img
-                src="https://i.postimg.cc/W4P1F2rm/pngegg-17.png"
-                style="width: 23px; height: 23px"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="col size">
-            <div class="lang text-center">
-              <p style="color: black">ENG</p>
-              <p style="color: black">US</p>
-            </div>
-          </div>
-          <div class="col size">
-            <div class="settings">
-              <img src="https://i.postimg.cc/HkNLpwWN/pngegg-8.png" alt="" />
-              <img
-                src="https://i.postimg.cc/JhBztsGz/pngegg-9.png"
-                style="margin-left: 7px"
-                alt=""
-              />
-              <img
-                src="https://i.postimg.cc/W1z3LWVr/pngegg-10.png"
-                style="margin-left: 7px"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="t-n">
-            <div class="col size time-noti">
-              <div class="time text-end">
-                <p style="color: black">00:42</p>
-                <p style="color: black">2023/05/14</p>
+              <div class="col-4 middle">
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/2yrthW6F/bb6961095e9a6dc1aac2af24ea88fc52.png" alt="" />
+                      </div>
+                  </div>
+                  <div class="bar">
+                      <div class="searching">
+                          <form @submit.prevent>
+                              <input type="search" name="search-outline" id="" placeholder="Search" class="search"
+                                  v-model="searchQuery" />
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/ryWvD8hw/pngegg-7.png" alt="" />
+                      </div>
+                  </div>
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/YC4KR1rt/pngwing-com.png" style="margin-top: 0.1rem" alt="" />
+                      </div>
+                  </div>
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/8cstGmn5/pngegg-3.png" style="border-radius: 0 0 5px 5px"
+                              alt="" />
+                      </div>
+                  </div>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <div class="col middle-icons" style="width:2.7rem">
+                          <div class="icons" style=" height: 2.4rem; width:2rem">
+                              <img src="https://i.postimg.cc/Ghyxj2WZ/pngwing-com-1.png" alt="" />
+                          </div>
+                      </div>
+                  </button>
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/rFR2C1FM/pngegg-5.png" alt="" />
+                      </div>
+                  </div>
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/gJh3Ht53/pngwing-com-2.png" alt="" />
+                      </div>
+                  </div>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <div class="col middle-icons" style="width:2.7rem">
+                          <div class="icons" style=" height: 2.4rem; width:2rem">
+                              <img src="https://i.postimg.cc/vH0xfdBp/pngwing-com-3.png" alt="" />
+                          </div>
+                      </div>
+                  </button>
+                  <div class="col middle-icons">
+                      <div class="icons">
+                          <img src="https://i.postimg.cc/qMW09mZN/pngegg-4.png" alt="" />
+                      </div>
+                  </div>
               </div>
-              <div class="noti">
-                <img src="https://i.postimg.cc/bwZtHNsK/pngegg-14.png" alt="" />
+              <div class="col-4 right">
+                  <div class="col size">
+                      <div class="set">
+                          <img src="https://i.postimg.cc/R0QVwjQk/pngegg-15.png" style="width: 12px; height: 12px"
+                              alt="" />
+                          <img src="https://i.postimg.cc/RFSCdXgN/pngegg-16.png" style="width: 15px; height: 12px"
+                              alt="" />
+                          <img src="https://i.postimg.cc/W4P1F2rm/pngegg-17.png" style="width: 23px; height: 23px"
+                              alt="" />
+                      </div>
+                  </div>
+                  <div class="col size">
+                      <div class="lang text-center">
+                          <p style="color: black">ENG</p>
+                          <p style="color: black">US</p>
+                      </div>
+                  </div>
+                  <div class="col size">
+                      <div class="settings">
+                          <img src="https://i.postimg.cc/HkNLpwWN/pngegg-8.png" alt="" />
+                          <img src="https://i.postimg.cc/JhBztsGz/pngegg-9.png" style="margin-left: 7px" alt="" />
+                          <img src="https://i.postimg.cc/W1z3LWVr/pngegg-10.png" style="margin-left: 7px" alt="" />
+                      </div>
+                  </div>
+                  <div class="t-n">
+                      <div class="col size time-noti">
+                          <div class="time text-end">
+                              <p style="color: black">00:42</p>
+                              <p style="color: black">2023/05/14</p>
+                          </div>
+                          <div class="noti">
+                              <img src="https://i.postimg.cc/bwZtHNsK/pngegg-14.png" alt="" />
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -255,6 +214,7 @@ export default {
   border-bottom: 2px solid blue;
   border-bottom-width: 2px;
 }
+
 /* .icons:hover {
     border-bottom: 2px solid blue;
     border-bottom-width: 2px;
@@ -365,27 +325,27 @@ p {
 
 @media screen and (min-width: 1920px) {
   .left {
-    width: 24%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+      width: 24%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
   }
 
   .right {
-    width: 22%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      width: 22%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 
   .middle {
-    width: 54%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+      width: 54%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
   }
+
   .middle-icons {
-    width: 8rem;
+      width: 8rem;
   }
-}
-</style>
+}</style>
