@@ -1,7 +1,7 @@
 <template>
   <div>
-      <div class="contain" v-for="pro in work" :key="pro">
-          <!-- <div class="left-folders">
+    <div class="contain" v-for="pro in work" :key="pro">
+      <!-- <div class="left-folders">
               <div class="desktop">
                   <div class="fold justify-content-start">
                       <div class="forms" style="height: 5rem">
@@ -73,7 +73,7 @@
                   </div>
               </div>
           </div> -->
-          <!-- <div class="fold justify-content-start" v-for="pro in work" :key="pro" >
+      <!-- <div class="fold justify-content-start" v-for="pro in work" :key="pro" >
               <button type="button" data-bs-toggle="modal" :data-bs-target="`#exampleModal${pro.id}`">
                   <div class="forms">
                       <div class="folder folding">
@@ -100,49 +100,49 @@
                   </div>
               </div>
           </div> -->
-          <button
-      type="button"
-      data-bs-toggle="modal"
-      :data-bs-target="`#exampleModal${pro.id}`"
-    >
-      <div class="forms">
-        <div class="folder folding">
-          <img :src="pro.image" alt="" style="margin-top: 0.5rem" />
-        </div>
-        <div class="text">
-          <p>{{ pro.text }}</p>
-        </div>
-      </div>
-    </button>
-    <div
-      class="modal fade"
-      :id="`exampleModal${pro.id}`"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+      <button
+        type="button"
+        data-bs-toggle="modal"
+        :data-bs-target="`#exampleModal${pro.id}`"
+      >
+        <div class="forms">
+          <div class="folder folding">
+            <img :src="pro.image" alt="" style="margin-top: 0.5rem" />
           </div>
-          <div class="modal-body">
-            <iframe
-              :src="pro.frame"
-              frameBorder="1"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
+          <div class="text">
+            <p>{{ pro.text }}</p>
+          </div>
+        </div>
+      </button>
+      <div
+        class="modal fade"
+        :id="`exampleModal${pro.id}`"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <iframe
+                :src="pro.frame"
+                frameBorder="1"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
-      </div>
   </div>
 </template>
 
@@ -155,8 +155,7 @@ export default {
         {
           text: "Recycle Bin",
           image: "https://i.postimg.cc/k5V07PHW/pngegg-5.png",
-          frame:
-            "",
+          frame: "",
           id: "1",
         },
         {
@@ -194,7 +193,6 @@ export default {
     };
   },
 };
-
 </script>
 
 <style>
@@ -238,8 +236,6 @@ export default {
   cursor: pointer;
 }
 
-
-
 button {
   background: transparent;
   border: none;
@@ -268,11 +264,11 @@ button a {
 
 @media screen and (min-width: 1920px) {
   .spot img {
-      margin-top: 1.5rem;
+    margin-top: 1.5rem;
   }
 
   .desktop {
-      margin-top: 1rem;
+    margin-top: 1rem;
   }
 }
 </style>

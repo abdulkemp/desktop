@@ -1,33 +1,84 @@
-<template>
+<!-- <template>
   <div class="footer">
-      <div class="containe fixed-bottom">
-          <div class="row">
-              <div class="col-4 left">
-                  <div class="weather">
-                      <div class="humidity">
-                          <img src="https://i.postimg.cc/hvLSPKdf/pngegg-1.png" alt="" />
-                      </div>
-                      <div class="temp">
-                          <p class="temperature">14°C</p>
-                          <p>Mostly cloudly</p>
-                      </div>
-                  </div>
+    <div class="containe fixed-bottom">
+      <div class="row">
+        <div class="col-4 left">
+          <div class="weather">
+            <div class="humidity">
+              <img src="https://i.postimg.cc/hvLSPKdf/pngegg-1.png" alt="" />
+            </div>
+            <div class="temp">
+              <p class="temperature">14°C</p>
+              <p>Mostly cloudly</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 middle" v-for="foot in icons" :key="foot">
+          <div class="col middle-icons">
+            <div class="icons">
+              <img
+                src="https://i.postimg.cc/2yrthW6F/bb6961095e9a6dc1aac2af24ea88fc52.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="bar">
+            <div class="searching">
+              <form @submit.prevent>
+                <input
+                  type="search"
+                  name="search-outline"
+                  id=""
+                  placeholder="Search"
+                  class="search"
+                  v-model="searchQuery"
+                />
+              </form>
+            </div>
+          </div>
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            :data-bs-target="`#footer${foot.id}`"
+          >
+            <div class="col middle-icons" style="width: 2.7rem">
+              <div class="icons" style="height: 2.4rem; width: 2rem">
+                <img :src="foot.image" alt="" />
               </div>
-              <div class="col-4 middle">
-                  <div class="col middle-icons">
-                      <div class="icons">
-                          <img src="https://i.postimg.cc/2yrthW6F/bb6961095e9a6dc1aac2af24ea88fc52.png" alt="" />
-                      </div>
+            </div>
+          </button>
+          <div v-for="foot in icons" :key="foot">
+            <div
+              class="modal fade"
+              :id="`footer${foot.id}`"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
                   </div>
-                  <div class="bar">
-                      <div class="searching">
-                          <form @submit.prevent>
-                              <input type="search" name="search-outline" id="" placeholder="Search" class="search"
-                                  v-model="searchQuery" />
-                          </form>
-                      </div>
+                  <div class="modal-body">
+                    <iframe
+                      :src="foot.frame"
+                      frameBorder="1"
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                    ></iframe>
                   </div>
-                  <div class="col middle-icons">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col middle-icons">
                       <div class="icons">
                           <img src="https://i.postimg.cc/ryWvD8hw/pngegg-7.png" alt="" />
                       </div>
@@ -72,57 +123,85 @@
                           <img src="https://i.postimg.cc/qMW09mZN/pngegg-4.png" alt="" />
                       </div>
                   </div>
-              </div>
-              <div class="col-4 right">
-                  <div class="col size">
-                      <div class="set">
-                          <img src="https://i.postimg.cc/R0QVwjQk/pngegg-15.png" style="width: 12px; height: 12px"
-                              alt="" />
-                          <img src="https://i.postimg.cc/RFSCdXgN/pngegg-16.png" style="width: 15px; height: 12px"
-                              alt="" />
-                          <img src="https://i.postimg.cc/W4P1F2rm/pngegg-17.png" style="width: 23px; height: 23px"
-                              alt="" />
-                      </div>
-                  </div>
-                  <div class="col size">
-                      <div class="lang text-center">
-                          <p style="color: black">ENG</p>
-                          <p style="color: black">US</p>
-                      </div>
-                  </div>
-                  <div class="col size">
-                      <div class="settings">
-                          <img src="https://i.postimg.cc/HkNLpwWN/pngegg-8.png" alt="" />
-                          <img src="https://i.postimg.cc/JhBztsGz/pngegg-9.png" style="margin-left: 7px" alt="" />
-                          <img src="https://i.postimg.cc/W1z3LWVr/pngegg-10.png" style="margin-left: 7px" alt="" />
-                      </div>
-                  </div>
-                  <div class="t-n">
-                      <div class="col size time-noti">
-                          <div class="time text-end">
-                              <p style="color: black">00:42</p>
-                              <p style="color: black">2023/05/14</p>
-                          </div>
-                          <div class="noti">
-                              <img src="https://i.postimg.cc/bwZtHNsK/pngegg-14.png" alt="" />
-                          </div>
-                      </div>
-                  </div>
-              </div>
+        </div>
+        <div class="col-4 right">
+          <div class="col size">
+            <div class="set">
+              <img
+                src="https://i.postimg.cc/R0QVwjQk/pngegg-15.png"
+                style="width: 12px; height: 12px"
+                alt=""
+              />
+              <img
+                src="https://i.postimg.cc/RFSCdXgN/pngegg-16.png"
+                style="width: 15px; height: 12px"
+                alt=""
+              />
+              <img
+                src="https://i.postimg.cc/W4P1F2rm/pngegg-17.png"
+                style="width: 23px; height: 23px"
+                alt=""
+              />
+            </div>
           </div>
+          <div class="col size">
+            <div class="lang text-center">
+              <p style="color: black">ENG</p>
+              <p style="color: black">US</p>
+            </div>
+          </div>
+          <div class="col size">
+            <div class="settings">
+              <img src="https://i.postimg.cc/HkNLpwWN/pngegg-8.png" alt="" />
+              <img
+                src="https://i.postimg.cc/JhBztsGz/pngegg-9.png"
+                style="margin-left: 7px"
+                alt=""
+              />
+              <img
+                src="https://i.postimg.cc/W1z3LWVr/pngegg-10.png"
+                style="margin-left: 7px"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="t-n">
+            <div class="col size time-noti">
+              <div class="time text-end">
+                <p style="color: black">00:42</p>
+                <p style="color: black">2023/05/14</p>
+              </div>
+              <div class="noti">
+                <img src="https://i.postimg.cc/bwZtHNsK/pngegg-14.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Footer",
+
+  data() {
+    return {
+      icons: [
+        {
+          id: 1,
+          frame: "http://www.google.com/search?igu=1",
+          image: "https://i.postimg.cc/Ghyxj2WZ/pngwing-com-1.png",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style>
 .containe {
-  /* background-image: linear-gradient, white); */
   background: rgba(191, 237, 251, 0.503);
   backdrop-filter: blur(12px);
   width: 100%;
@@ -159,7 +238,6 @@ export default {
   height: 44px;
   border-radius: 50px;
   border: transparent;
-  /* text-align: center; */
   padding-left: 30px;
   padding-right: 30px;
   font-size: 15px;
@@ -172,7 +250,6 @@ export default {
   justify-content: center;
   align-content: center;
   margin: 0.3rem;
-  /* border: 1px solid black; */
 }
 
 .middle-icons:hover {
@@ -182,7 +259,6 @@ export default {
 }
 
 .size {
-  /* margin: 0.3rem; */
   height: 2.7rem;
   display: flex;
   justify-content: center;
@@ -203,8 +279,6 @@ export default {
   width: 2.6rem;
 }
 
-
-
 .icons:active {
   border-bottom: 2px solid blue;
   border-bottom-width: 2px;
@@ -215,16 +289,11 @@ export default {
   border-bottom-width: 2px;
 }
 
-/* .icons:hover {
-    border-bottom: 2px solid blue;
-    border-bottom-width: 2px;
-} */
 
 .time-noti {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
   margin-right: 1rem;
 }
 
@@ -286,7 +355,6 @@ p {
 .settings img {
   width: 1.2rem;
   height: 1.2rem;
-  /* margin-left: 6px; */
 }
 
 .settings {
@@ -294,7 +362,6 @@ p {
   justify-content: center;
   align-items: center;
   width: 6rem;
-  /* height: 2rem; */
   margin-left: 1px;
 }
 
@@ -308,7 +375,6 @@ p {
 .noti img {
   width: 1.2rem;
   height: 1.2rem;
-  /* margin-left: 6px; */
 }
 
 .set {
@@ -320,32 +386,48 @@ p {
 
 .set img {
   margin-right: 0.5rem;
-  /* margin-left: 6px; */
 }
 
 @media screen and (min-width: 1920px) {
   .left {
-      width: 24%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
+    width: 24%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
   }
 
   .right {
-      width: 22%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .middle {
-      width: 54%;
-      display: flex;
-      justify-content: center;
-      align-content: center;
+    width: 54%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
 
   .middle-icons {
-      width: 8rem;
+    width: 8rem;
   }
-}</style>
+}
+</style> -->
+
+<template>
+  <div>
+
+  </div>
+</template>
+
+<script>
+  export default {
+    
+  }
+</script>
+
+<style lang="scss" scoped>
+
+</style>
